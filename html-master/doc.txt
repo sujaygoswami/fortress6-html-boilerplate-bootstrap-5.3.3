@@ -1,0 +1,65 @@
+1. Install Node.js
+To compile Sass via the command line, first we need to install node.js. Download it from the official website nodejs.org, open the package and follow the wizard.
+
+2. Initialize NPM
+NPM is the Node Package Manager for JavaScript. NPM makes it easy to install and uninstall third party packages. To initialize a Sass project with NPM, open your terminal and CD (change directory) to your project folder.
+
+Navigating to SASS-tutorial folder
+Navigating to Sass project folder
+Once in the correct folder, run the command npm init. You will be prompted to answer several questions about the project, after which NPM will generate a package.json file in your folder.
+
+packagejson
+3. Install Node-Sass
+Node-sass is an NPM package that compiles Sass to CSS (which it does very quickly too). To install node-sass run the following command in your terminal: npm install node-sass
+
+4. Write Node-sass Command 
+Everything is ready to write a small script in order to compile Sass. Open the package.json file in a code editor. You will see something like this:
+
+01
+02
+03
+04
+05
+06
+07
+08
+09
+10
+11
+{
+  "name": "sass-tutorial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
+In the scripts section add an scss command, under the test command, as it’s shown below:
+
+1
+2
+3
+4
+"scripts": {
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "scss": "node-sass --watch scss -o css"
+}
+Let’s go through this line word by word. 
+
+node-sass: Refers to the node-sass package.
+--watch: An optional flag which means “watch all .scss files in the scss/ folder and recompile them every time there’s a change.”
+scss: The folder name where we put all our .scss files.
+-o css: The output folder for our compiled CSS.
+When we run this script it will watch every .scss file in the scss/ folder, then save the compiled css in css/ folder every time we change a .scss file.
+
+5. Run the Script
+To execute our one-line script, we need to run the following command in the terminal: npm run scss
+
+And voila! We are watching and compiling SASS.
+
+
+Sass Quick Tips
+Stay tuned for more Sass quick tips; there’s a whole collection on the way!

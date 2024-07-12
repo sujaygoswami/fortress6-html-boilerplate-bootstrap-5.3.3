@@ -1,0 +1,40 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin transition($transition-effect) {
+	-webkit-transition: $transition-effect;
+    transition: $transition-effect;
+   }
+
+
+@mixin opacity($opacity-effect) {
+	-moz-opacity: $opacity-effect;
+	-khtml-opacity: $opacity-effect;
+    opacity: $opacity-effect;
+   }
+
+@mixin box-shadow($shadow-effect) {
+	-moz-box-shadow: $shadow-effect;
+	-webkit-box-shadow: $shadow-effect;
+    box-shadow: $shadow-effect;
+   }  
+
+
+@mixin transform($rotation-effect) {
+   -ms-transform: $rotation-effect; 
+    -webkit-transform: $rotation-effect; 
+    transform: $rotation-effect;
+    }    
+
+
+@mixin transform-origin($transformaition-placement) {
+    -ms-transform-origin: $transformaition-placement; 
+    -webkit-transform-origin: $transformaition-placement; 
+    transform-origin: $transformaition-placement;
+    }  
+
+
