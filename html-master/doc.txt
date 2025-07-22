@@ -63,3 +63,10 @@ And voila! We are watching and compiling SASS.
 
 Sass Quick Tips
 Stay tuned for more Sass quick tips; there’s a whole collection on the way!
+
+
+
+
+<!-- run tpl -->
+node inject-templates.js
+<!-- run tpl -->

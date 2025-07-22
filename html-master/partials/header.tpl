@@ -1,6 +1,3 @@
-
-
-
 <!doctype html>
 <html class="no-js" lang="">
 
@@ -21,38 +18,3 @@
 <!--[if lt IE 10]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
-<body class="site-name">
-
-
-
-
-
-
-
-    <!-- main -->
-    <main class="my-row">
-
-
-    </main>
-    <!-- main -->
-
-
-    <!-- build:vendorjs -->
-<script src="JavaScript/lib/bootstrap.bundle.js"></script>
-<script src="JavaScript/lib/jquery.matchHeight-min.js"></script>
-<!-- endbuild -->
-
-<!-- build:js -->
-<script src="JavaScript/init/main.js"></script>
-<!-- endbuild -->
-
-
-
-
-  
-
-
-</body>
-
-</html>
