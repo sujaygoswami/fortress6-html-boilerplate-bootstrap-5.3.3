@@ -5,7 +5,12 @@
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "scss": "node-sass --watch scss -o Styles"
+        "scss": "node-sass --watch scss -o Styles",
+        "watch:tpl": "nodemon --watch src --watch partials --ext html,tpl --exec \"npm run build:html\"",
+        "format:html": "prettier --write \"src/**/*.html\"",
+        "build:html": "node inject-templates.js && npm run format:html",
+        "build:css": "node build-css.js",
+        "watch:sass": "nodemon --watch scss --ext scss,sass --exec \"npm run build:css\""
     },
     "author": "",
     "license": "ISC",
@@ -14,5 +19,14 @@
         "node-sass": "^9.0.0",
         "postcss": "^8.5.6",
         "sass": "^1.89.2"
-    }
+    },
+    "devDependencies": {
+        "nodemon": "^3.1.10",
+        "prettier": "^3.6.2"
+    },
+    "browserslist": [
+        "last 2 versions",
+        "ie 11",
+        "Android 4.4"
+    ]
 }

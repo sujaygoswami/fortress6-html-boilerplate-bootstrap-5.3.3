@@ -1,3 +1,4 @@
+
 <!-- build:vendorjs -->
 <script src="JavaScript/lib/bootstrap.bundle.js"></script>
 <script src="JavaScript/lib/jquery.matchHeight-min.js"></script>
@@ -6,3 +7,5 @@
 <!-- build:js -->
 <script src="JavaScript/init/main.js"></script>
 <!-- endbuild -->
+</body>
+</html>

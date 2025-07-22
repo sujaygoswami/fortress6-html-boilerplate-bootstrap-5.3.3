@@ -70,3 +70,11 @@ Stay tuned for more Sass quick tips; there’s a whole collection on the way!
 <!-- run tpl -->
 node inject-templates.js
 <!-- run tpl -->
+
+<!-- run tpl -->
+npm run watch:tpl
+<!-- run tpl -->
+
+<!-- run sass -->
+npm run watch:sass
+<!-- run sass -->
