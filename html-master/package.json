@@ -4,14 +4,15 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "scss": "node-sass --watch scss -o Styles",
-        "watch:tpl": "nodemon --watch src --watch partials --ext html,tpl --exec \"npm run build:html\"",
-        "format:html": "prettier --write \"src/**/*.html\"",
-        "build:html": "node inject-templates.js && npm run format:html",
-        "build:css": "node build-css.js",
-        "watch:sass": "nodemon --watch scss --ext scss,sass --exec \"npm run build:css\""
-    },
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch scss -o Styles",
+    "watch:tpl": "nodemon --watch src --watch partials --ext html,tpl --exec \"npm run build:html\"",
+    "format:html": "prettier --write \"src/**/*.html\"",
+    "build:html": "node inject-templates.js && npm run format:html && npm run validate:html",
+    "build:css": "node build-css.js",
+    "watch:sass": "nodemon --watch scss --ext scss,sass --exec \"npm run build:css\"",
+    "validate:html": "w3c-html-validator *.html"
+  },
     "author": "",
     "license": "ISC",
     "dependencies": {
@@ -21,8 +22,10 @@
         "sass": "^1.89.2"
     },
     "devDependencies": {
+        "glob": "^10.3.10",
         "nodemon": "^3.1.10",
-        "prettier": "^3.6.2"
+        "prettier": "^3.6.2",
+        "w3c-html-validator": "^1.9.0"
     },
     "browserslist": [
         "last 2 versions",
