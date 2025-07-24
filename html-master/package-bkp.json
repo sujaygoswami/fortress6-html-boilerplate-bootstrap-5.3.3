@@ -6,15 +6,15 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "scss": "node-sass --watch scss -o Styles",
-        "watch:sass": "nodemon --watch scss --ext scss,sass --exec \"npm run build:css\"",
+        "watch:tpl": "nodemon --watch src --watch partials --ext html,tpl --exec \"npm run build:html\"",
         "format:html": "prettier --write \"src/**/*.html\"",
         "build:html": "node inject-templates.js && npm run format:html && npm run validate:html",
         "build:css": "node build-css.js",
+        "watch:sass": "nodemon --watch scss --ext scss,sass --exec \"npm run build:css\"",
         "validate:html": "w3c-html-validator *.html",
         "build:copy": "npm run copy:folders && npm run copy:html",
         "copy:folders": "cpx \"{Fonts,Images,JavaScript,scss,Styles}/**/*\" dist",
-        "copy:html": "cpx \"*.html\" dist",
-        "watch:tpl": "concurrently \"npm run watch:sass\" \"nodemon --watch src --watch partials --ext html,tpl --exec 'npm run build:html' & browser-sync start --server --files 'dist/**/*,Styles/**/*.css,*.html'\""
+        "copy:html": "cpx \"*.html\" dist"
     },
     "author": "",
     "license": "ISC",
