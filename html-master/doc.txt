@@ -78,3 +78,7 @@ npm run watch:tpl
 <!-- run sass -->
 npm run watch:sass
 <!-- run sass -->
+
+<!-- copy to dist folder -->
+npm run build:copy
+<!-- copy to dist folder -->
