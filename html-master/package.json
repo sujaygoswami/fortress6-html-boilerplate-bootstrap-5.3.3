@@ -12,8 +12,11 @@
         "build:css": "node build-css.js",
         "validate:html": "w3c-html-validator *.html",
         "build:copy": "npm run copy:folders && npm run copy:html",
-        "copy:folders": "cpx \"{Fonts,Images,JavaScript,scss,Styles}/**/*\" dist",
-        "copy:html": "cpx \"*.html\" dist",
+        "copy:folders": "cpx \"{Fonts,Images,JavaScript,scss,Styles}/**/*\" dist && cpx \"{Fonts,Images,JavaScript,scss,Styles}/**/*\" live_repo",
+        "copy:html": "cpx \"*.html\" dist && cpx \"*.html\" live_repo",
+        "build:copy:live": "npm run copy:folders:live && npm run copy:html:live",
+        "copy:folders:live": "cpx \"{Fonts,Images,JavaScript,scss,Styles}/**/*\" live_repo",
+        "copy:html:live": "cpx \"*.html\" live_repo",
         "watch:tpl": "concurrently \"npm run watch:sass\" \"nodemon --watch src --watch partials --ext html,tpl --exec 'npm run build:html' & browser-sync start --server --files 'dist/**/*,Styles/**/*.css,*.html'\""
     },
     "author": "",
