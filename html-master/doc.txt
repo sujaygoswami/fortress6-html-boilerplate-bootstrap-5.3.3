@@ -82,3 +82,9 @@ npm run watch:sass
 <!-- copy to dist folder -->
 npm run build:copy
 <!-- copy to dist folder -->
+
+
+<!-- validate html files -->
+"validate:html": "w3c-html-validator *.html",
+"build:html": "node inject-templates.js && npm run format:html && npm run validate:html",
+<!-- validate html files -->

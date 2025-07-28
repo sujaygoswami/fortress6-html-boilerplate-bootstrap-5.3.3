@@ -6,8 +6,8 @@ const distDir = path.join(__dirname);
 const templatesDir = path.join(__dirname, 'partials');
 
 // Read template files
-const header = fs.readFileSync(path.join(templatesDir, 'header.tpl'), 'utf8');
-const footer = fs.readFileSync(path.join(templatesDir, 'footer.tpl'), 'utf8');
+const header = fs.readFileSync(path.join(templatesDir, 'header.html'), 'utf8');
+const footer = fs.readFileSync(path.join(templatesDir, 'footer.html'), 'utf8');
 
 // Ensure dist directory exists
 if (!fs.existsSync(distDir)) {
