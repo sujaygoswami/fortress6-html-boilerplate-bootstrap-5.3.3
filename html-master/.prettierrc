@@ -1,3 +1,4 @@
 {
-  "htmlVoidTags": "none"
+  "htmlVoidTags": "none",
+  "printWidth": 200
 }
