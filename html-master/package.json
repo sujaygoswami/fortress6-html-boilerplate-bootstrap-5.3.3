@@ -16,7 +16,8 @@
         "build:copy:live": "npm run copy:folders:live && npm run copy:html:live",
         "copy:folders:live": "cpx \"{Fonts,Images,JavaScript,scss,Styles}/**/*\" live_repo",
         "copy:html:live": "cpx \"*.html\" live_repo",
-        "watch:tpl": "concurrently \"npm run watch:sass\" \"nodemon --watch src --watch partials --ext html,tpl --exec 'npm run build:html' & browser-sync start --server --files 'dist/**/*,Styles/**/*.css,*.html'\""
+        "validate:html": "node validate-html.js",
+        "watch:tpl": "concurrently \"npm run watch:sass\" \"nodemon --watch src --watch partials --ext html,tpl --exec 'npm run build:html && npm run validate:html' & browser-sync start --server --files 'dist/**/*,Styles/**/*.css,*.html'\""
     },
     "author": "",
     "license": "ISC",
@@ -32,7 +33,9 @@
         "glob": "^10.3.10",
         "nodemon": "^3.1.10",
         "prettier": "^3.6.2",
-        "w3c-html-validator": "^1.9.0"
+        "htmlhint": "^1.1.4",
+        "html-validate": "^8.9.1",
+        "concurrently": "^8.2.2"
     },
     "browserslist": [
         "last 2 versions",
